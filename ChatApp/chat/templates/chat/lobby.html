@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+({% block content %}
+<h1>Pick a room to chat</h1>
+
+
+<script type='text/javascript'>
+    let url = `ws://${window.location.host}/ws/chat/`;
+    let chatSocket = new WebSocket(url);
+    chatSocket.onmessage = function(e) {
+        let data = JSON.parse(e.data);
+        console.log(data);
+    };
+</script>
+{% endblock content %})

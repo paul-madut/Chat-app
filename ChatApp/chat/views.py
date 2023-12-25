@@ -8,6 +8,6 @@ from . import forms
 loginUrl = '/accounts/login/' 
 
 @login_required(login_url=loginUrl)
-def index(request):
+def lobby(request):
     
-    return render(request, 'Hello from the chat index page')
+    return render(request, "chat/lobby.html")
